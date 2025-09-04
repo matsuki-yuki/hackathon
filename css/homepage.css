@@ -1,17 +1,42 @@
+body{
+  background-image: url("img/summerback.png");
+  background-size: cover;
+}
 h1{
   color: white;
   text-align: center;
   background-color:darkkhaki;
 }
-
-h2{
+.gnav-wrap{
+  background: #1b9aaa;
+}
+.gnav-inner{
+  margin-inline: auto;
+  padding: 0.5em 1.5em;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.gnav-list{
   text-align: center;
+  background: #1b9aaa;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+.gnav-list li a{
+  display: inline;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+.bnav-list li span{
+  font-size: 22px;
+  display: block;
 }
 
-h3{
-  text-align: center;
-}
-
-h4{
+*{
   text-align: center;
 }
