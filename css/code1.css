@@ -1,0 +1,49 @@
+body {
+    background-color:#fff;
+}
+h1 {
+    color: white;
+    font-size: 100px;
+    background-color: rgb(140, 218, 249);
+
+}
+*{  /* 全ての要素に対して適用 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+/*code2*/
+a{
+    display: block;
+    width: 200px;
+    margin: 40px auto;
+    padding: 1em;
+    text-align: center;
+}
+@media screen and (min-width: 960px) {
+    a:hover{
+        opacity:0.7;
+    }
+}
+a.text-link{
+    color: #008000;
+    text-decoration: underline;
+}
+a.button-link{
+    background-color: #ffd700;
+    text-decoration: none;
+    color: #ff4500;
+    border-radius: 20px;
+}
+a.button-link2{
+    background: #1e90ff;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 10px;
+    border-bottom:4px solid #191970;
+}
+a.button-link2:active{
+    border-bottom:none;
+    transform: translateY(4px);
+}
