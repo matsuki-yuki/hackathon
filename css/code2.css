@@ -1,13 +1,32 @@
-/*code2*/
-body {
-    font-family: 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
+ul{
+    border: 10px solid #aae5e7;
+    padding: 1em 1em 0;
+    list-style: none;
 }
 
-h1 {
-    color: #444;
+ul li{
+    border-bottom: 4px dotted #6ba3b3;
+    margin-bottom: 1em;
 }
 
-p {
-    margin: 0 0 1em;
+ul li::before{
+    content:url(../img/arrow.png);
+    margin-right: 4em;
+    vertical-align: middle;
+}
+ol{
+    border: 10px solid #ffc43d;
+    padding: 20px 40px 20px;
+}
+
+ol li{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background: url("../img/arrow.png") left bottom no-repeat;
+}
+
+ol li:last-of-type{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background: transparent;
 }
