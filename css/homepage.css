@@ -1,42 +1,123 @@
-body{
-  background-image: url("img/summerback.png");
-  background-size: cover;
-}
-h1{
-  color: white;
-  text-align: center;
-  background-color:darkkhaki;
-}
-.gnav-wrap{
-  background: #1b9aaa;
-}
-.gnav-inner{
-  margin-inline: auto;
-  padding: 0.5em 1.5em;
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.gnav-list{
-  text-align: center;
-  background: #1b9aaa;
-  padding: 0;
-  display: flex;
-  gap: 1em;
-}
-.gnav-list li a{
-  display: inline;
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-  text-decoration: none;
-}
-.bnav-list li span{
-  font-size: 22px;
-  display: block;
+/* --- 全体の設定 --- */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+  background-color: #f9f8f6; /* 少しクリーム色がかった背景 */
+  color: #333; /* 基本の文字色 */
+  background-image: url('/Users/x25089xx/github/hackathon/img/49478.jpg'); /* 画像のパスを指定 */
+  background-size: cover; /* 画面全体を覆うように拡大・縮小 */
+  background-attachment: fixed; /* スクロールしても背景画像を固定 */
+  background-position: center center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 画像の繰り返しをしない */
 }
 
-*{
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- ヘッダーとナビゲーション --- */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* ヘッダーに少し影をつける */
+}
+
+.gnav-wrap {
+  background-color: #4a90e2; /* ナビゲーションバーの背景色 */
+}
+
+.gnav-inner {
+  max-width: 1200px;
+  margin: 0 auto; /* 中央揃え */
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; /* ロゴとメニューを両端に配置 */
+  align-items: center;
+}
+
+.gnav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.gnav-list {
+  list-style: none; /* リストの黒点を消す */
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.gnav-list li a {
+  display: block;
+  padding: 20px 15px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s; /* 背景色が0.3秒で変化 */
+}
+
+.gnav-list li a:hover {
+  background-color: #357abd; /* マウスを乗せた時の色 */
+}
+
+/* --- メインコンテンツ --- */
+main {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto 40px auto; /* 上下左右に余白、中央揃え */
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px; /* 角を少し丸くする */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
   text-align: center;
+  color: #4a90e2;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* --- INFORMATIONセクション --- */
+.info-section dl {
+  margin: 0;
+}
+
+.info-section dt {
+  font-weight: bold;
+  padding: 15px 0 5px;
+  border-top: 1px solid #eee;
+}
+
+.info-section dt:first-of-type {
+  border-top: none; /* 最初の項目の上線は消す */
+}
+
+.info-section dd {
+  margin-left: 0; /* ddのデフォルトのインデントをリセット */
+  padding-bottom: 15px;
+}
+
+.map-image {
+  display: inline;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* --- フッター --- */
+footer {
+  text-align: center;
+  padding: 14px;
+  background-color: #333;
+  color: #ffffff;
 }
