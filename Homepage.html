@@ -1,32 +1,60 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>〇〇夏祭り</title>
     <link rel="stylesheet" href="css/homepage.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>〇〇夏祭りへようこそ！</h1>
-  <div class="gnav-wrap">
-    <nav class="gnav-inner">
-      <ul class="gnav-list">
-        <a href="Homepage.html"><span>ホーム</span></a>
-        <a href="Yatai.html"><span>屋台一覧</span></a>
-        <a href="Lostchild.html"><span>迷子案内</span></a>
-        <a href="Lostproperty.html"><span>落とし物案内</span></a>
+
+  <header>
+    <div class="gnav-wrap">
+      <nav class="gnav-inner">
+        <p class="gnav-logo"><span>〇〇夏祭り</span></p>
+        <ul class="gnav-list">
+          <li><a href="Homepage.html">ホーム</a></li>
+          <li><a href="Yatai.html">屋台一覧</a></li>
+          <li><a href="Lostchild.html">迷子案内</a></li>
+          <li><a href="Lostproperty.html">落とし物案内</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2>祭りの概要</h2>
+      <p>〇〇祭りは、地域の活性化を目的としたイベントです。様々な出店やアトラクションがあり、家族連れや友人同士で楽しめる内容となっています。</p>
+      <p>美味しいたこ焼き、懐かしの射的など、楽しい屋台がたくさん！詳細は<a href="Yatai.html">屋台一覧</a>ページをご覧ください。</p>
+    </section>
+    <section class="container lost">
+      <h2>迷子・落とし物案内</h2>
+      <p>迷子や落とし物に関する情報は、以下のリンクからご確認ください。</p>
+      <ul>
+        <li>迷子案内は<a href="Lostchild.html">こちら</a>からご確認ください。</li>
+        <li>落とし物・忘れ物は<a href="Lostproperty.html">こちら</a>からご確認ください。</li>
       </ul>
-    </nav>
-  </div>
-  <h2>祭りの概要</h2>
-  <p>〇〇祭りは、地域の活性化を目的としたイベントです。様々な出店やアトラクションがあり、家族連れや友人同士で楽しめる内容となっています。</p>
-  <h3><a href="Yatai.html">屋台一覧</a></h3>
-    <p>射的</p>
-  <h4>INFORMATION</h4>
-    <p>開催日時: 2023年8月20日(日) 10:00〜17:00</p>
-    <p>開催場所: 〇〇公園</p>
-    <p>地図: <a href="map.html">こちら</a></p>
-    <p>入場料: 無料</p>
+    </section>
+    <section class="container info-section">
+      <h3>INFORMATION</h3>
+      <dl>
+        <dt>開催日時</dt>
+        <dd>2025年8月24日(日) 10:00〜17:00</dd>
+        <dt>開催場所</dt>
+        <dd>愛知工業大学</dd>
+        <dt>会場地図</dt>
+        <dd><img src="img/schoolmap.png" alt="会場地図" class="map-image"></dd>
+        <dt>入場料</dt>
+        <dd>無料</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 〇〇夏祭り実行委員会</p>
+  </footer>
 
 </body>
+</html>
