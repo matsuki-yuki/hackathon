@@ -7,7 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>夏のお祭り</title>
   <link rel="stylesheet" href="style.css" />
+<link rel="icon" href="./images/favicon.ico" />
+html{
+  overflow-y: scroll;
+}
 </head>
+
 <body>
 
   <header>
