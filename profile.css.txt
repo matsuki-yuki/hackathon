@@ -1,0 +1,114 @@
+/*profile.css*/
+
+/* ===== 全体のスタイル ===== */
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background-color: #fff8e7;
+  color: #333;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #e60033;
+  color: white;
+  text-align: center;
+  padding: 1.5em 0;
+  font-size: 1.8em;
+}
+
+/* ===== カウントダウン表示（静的） ===== */
+.countdown-static {
+  text-align: center;
+  background-color: #fff3cd;
+  padding: 2em 1em;
+  border-top: 4px dashed #e60033;
+  border-bottom: 4px dashed #e60033;
+  font-size: 1.5em;
+  color: #d40000;
+}
+
+/* ===== 花火アニメーション ===== */
+.fireworks-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.firework {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: red;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(0) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5) translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
+
+/* ===== 案内カード（迷子・落とし物） ===== */
+.info-card {
+  position: relative;
+  margin: 2em auto;
+  max-width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bg-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(60%);
+}
+
+.info-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.info-text h2 {
+  margin-bottom: 0.5em;
+  font-size: 1.8em;
+}
+
+/* ===== フッター ===== */
+footer {
+  text-align: center;
+  background-color: #e60033;
+  color: white;
+  padding: 1em;
+  margin-top: 3em;
+}
+
+/* ===== レスポンシブ対応 ===== */
+@media (max-width: 600px) {
+  .info-text h2 {
+    font-size: 1.4em;
+  }
+
+  .info-text p {
+    font-size: 0.95em;
+  }
+}

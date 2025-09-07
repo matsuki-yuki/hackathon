@@ -1,0 +1,78 @@
+/*profile.html*/
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>夏のお祭り</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+<div class="gnav-wrap">
+      <nav class="gnav-inner">
+        <p class="gnav-logo"><span>〇〇夏祭り</span></p>
+        <ul class="gnav-list">
+          <li><a href="Homepage.html">ホーム</a></li>
+          <li><a href="Yatai.html">屋台一覧</a></li>
+          <li><a href="Lostchild.html">迷子案内</a></li>
+          <li><a href="Lostproperty.html">落とし物案内</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 疑似カウントダウン -->
+  <section class="countdown-static">
+    お祭り開始まであと <strong>3日</strong>！
+  </section>
+
+  <!-- 花火アニメーション -->
+  <div class="fireworks-container">
+    <div class="firework" style="top: 40%; left: 20%; background: #ff3cac; --x: -50px; --y: -100px;"></div>
+    <div class="firework" style="top: 60%; left: 80%; background: #2b86c5; --x: 70px; --y: -80px;"></div>
+    <div class="firework" style="top: 30%; left: 50%; background: #ffd700; --x: 0px; --y: -120px;"></div>
+    <div class="firework" style="top: 70%; left: 30%; background: #ff6961; --x: -60px; --y: -60px;"></div>
+    <div class="firework" style="top: 50%; left: 70%; background: #66ff66; --x: 50px; --y: -90px;"></div>
+  </div>
+
+  <!-- 案内カード -->
+  <main>
+    <section class="info-card">
+      <img src="images/yo-yo.jpg" alt="ヨーヨー釣り" class="bg-img" />
+      <div class="info-text">
+        <h2>迷子のご案内</h2>
+        <ul> <li>迷子案内は<a href="Lostchild.html">こちら</a>からご確認ください。</li></ul>
+      </div>
+    </section>
+
+    <section class="info-card">
+      <img src="images/goldfish.jpg" alt="金魚すくい" class="bg-img" />
+      <div class="info-text">
+        <h2>落とし物の案内</h2>
+        <p> <ul><li>落とし物・忘れ物は<a href="Lostproperty.html">こちら</a>からご確認ください。</li>
+      </ul>
+      </div>
+    </section>
+ <h3>INFORMATION</h3>
+      <dl>
+        <dt>開催日時</dt>
+        <dd>2025年8月24日(日) 10:00〜17:00</dd>
+        <dt>開催場所</dt>
+        <dd>愛知工業大学</dd>
+        <dt>会場地図</dt>
+        <dd><img src="img/schoolmap.png" alt="会場地図" class="map-image"></dd>
+        <dt>入場料</dt>
+        <dd>無料</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 〇〇夏祭り実行委員会</p>
+  </footer>
+
+</body>
+</html>
