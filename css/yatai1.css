@@ -1,52 +1,73 @@
+/* --- 1. 全体・共通設定 --- */
+
+/* カラー変数 */
+:root {
+  --primary-color: #4a90e2; /* メインの青色 */
+  --primary-hover-color: #357abd; /* マウスホバー時の青色 */
+  --header-text-color: #ffffff; /* ヘッダーの文字色 */
+  --footer-bg-color: #333; /* フッターの背景色 */
+  --body-bg-color: #f9f8f6; /* 背景のクリーム色 */
+  --text-color: #333; /* 基本の文字色 */
+  --container-bg-color: #ffffff; /* コンテンツ背景の白色 */
+  --border-color: #eee; /* 薄い境界線 */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* 影の色 */
+}
+
 /* --- 全体の設定 --- */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
-  background-color: #f9f8f6; /* 少しクリーム色がかった背景 */
-  color: #333; /* 基本の文字色 */
-  background-image: url('/Users/x25089xx/github/hackathon/img/49478.jpg'); /* 画像のパスを指定 */
-  background-size: cover; /* 画面全体を覆うように拡大・縮小 */
-  background-attachment: fixed; /* スクロールしても背景画像を固定 */
-  background-position: center center; /* 画像を中央に配置 */
-  background-repeat: no-repeat; /* 画像の繰り返しをしない */
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  background-image: url('../img/49478.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  /* body自体を重ね合わせコンテキストにする */
+  isolation: isolate;
+  position: relative;
 }
 
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+/* 画像の上に重ねる半透明の白色レイヤー */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--container-bg-color);
+  opacity: 0.5;
+  /* z-index: -1 で body の背面に配置 */
+  z-index: -1;
 }
 
 /* --- ヘッダーとナビゲーション --- */
-header {
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* ヘッダーに少し影をつける */
-}
-
 .gnav-wrap {
-  background-color: #4a90e2; /* ナビゲーションバーの背景色 */
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .gnav-inner {
   max-width: 1200px;
-  margin: 0 auto; /* 中央揃え */
+  margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between; /* ロゴとメニューを両端に配置 */
+  justify-content: space-between;
   align-items: center;
 }
 
 .gnav-logo {
   font-size: 30px;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--header-text-color);
 }
+/* <span>タグのデザインは不要なため削除 */
 
 .gnav-list {
-  list-style: none; /* リストの黒点を消す */
+  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -55,58 +76,144 @@ header {
 .gnav-list li a {
   display: block;
   padding: 20px 15px;
-  color: #ffffff;
+  color: var(--header-text-color);
   font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s; /* 背景色が0.3秒で変化 */
+  transition: background-color 0.3s;
 }
 
 .gnav-list li a:hover {
-  background-color: #357abd; /* マウスを乗せた時の色 */
+  background-color: var(--primary-hover-color);
 }
-h1 {
-    color: white;
-    font-size: 100px;
-    background-color: rgb(140, 218, 249);
 
+
+/* --- 2. 屋台ページ専用コンテンツ --- */
+
+/* メインコンテンツエリア */
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--shadow-color);
 }
-*{  /* 全ての要素に対して適用 */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
-/*code2*/
-a{
-    display: block;
-    width: 200px;
-    margin: 40px auto;
-    padding: 1em;
-    text-align: center;
+
+h1 {
+  text-align: center;
+  color: var(--primary-color); /* h1の色を青に変更 */
+  margin-bottom: 15px;
+  font-size: 2em;
+  border-bottom: 2px solid var(--primary-color); /* h1の下線を追加 */
+  padding-bottom: 10px;
+  /* 中央寄せのための追加 */
+  width: fit-content; /* 内容の幅に合わせる */
+  margin-left: auto;
+  margin-right: auto;
 }
-@media screen and (min-width: 960px) {
-    a:hover{
-        opacity:0.7;
-    }
+
+.intro {
+  text-align: center;
+  color: #555;
+  font-size: 1.1em;
+  margin-bottom: 40px;
 }
-a.text-link{
-    color: #008000;
-    text-decoration: underline;
+
+/* --- 屋台カードのグリッドレイアウト --- */
+.yatai-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
-a.button-link{
-    background-color: #ffd700;
-    text-decoration: none;
-    color: #ff4500;
-    border-radius: 20px;
+
+/* --- 屋台カードのスタイル --- */
+.yatai-card {
+  background-color: var(--container-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-a.button-link2{
-    background: #1e90ff;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 20px;
-    border-radius: 10px;
-    border-bottom:4px solid #191970;
+
+.yatai-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  display: block;
 }
-a.button-link2:active{
-    border-bottom:none;
-    transform: translateY(4px);
+
+.yatai-info {
+  padding: 20px;
+}
+
+.yatai-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  color: var(--text-color);
+}
+
+.yatai-info p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.yatai-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+.price {
+  color: var(--primary-color); /* 価格の色を青に変更 */
+}
+
+.area {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+
+/* --- 3. フッター --- */
+footer {
+  text-align: center;
+  padding: 100px;
+  background-color: var(--footer-bg-color);
+  color: var(--header-text-color);
+}
+
+/* --- 4. 会場マップ --- */
+
+.map-section {
+  margin-top: 100px;
+}
+
+.map-section h2 {
+  text-align: center;
+  color: var(--primary-color); /* h2の色を青に変更 */
+  margin-bottom: 15px;
+  font-size: 2em;
+  border-bottom: 2px solid var(--primary-color); /* h2の下線を追加 */
+  padding-bottom: 10px;
+  /* 中央寄せのための追加 */
+  width: fit-content; /* 内容の幅に合わせる */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ▼▼▼ iframe の指定を img に変更 ▼▼▼ */
+.map-section img {
+  width: 300%; /* 横幅を親要素いっぱいに広げる */
+  height: auto; /* 高さは自動調整にして画像の比率を保つ */
+  display: block; /* 画像の下にできる余分な隙間をなくす */
+  border-radius: 10px; /* 角を丸くする */
+  box-shadow: 0 4px 8px var(--shadow-color); /* 影をつける */
 }

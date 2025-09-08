@@ -1,14 +1,30 @@
-/* --- 全体の設定 --- */
+/* --- 全体の基本設定 --- */
 body {
+  position: relative;
+  isolation: isolate;
+
   margin: 0;
   font-family: 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
-  background-color: #f9f8f6; /* 少しクリーム色がかった背景 */
-  color: #333; /* 基本の文字色 */
-  /* background-image: url('/Users/x25089xx/github/hackathon/img/49478.jpg'); /* 画像のパスを指定 */
-  /* background-size: cover; /* 画面全体を覆うように拡大・縮小 */
-  /*background-attachment: fixed; /* スクロールしても背景画像を固定 */
-  /*background-position: center center; /* 画像を中央に配置 */
-  /*background-repeat: no-repeat; /* 画像の繰り返しをしない */
+  background-color: #f9f8f6;
+  color: #333;
+  background-image: url('../img/49478.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* 画像の上に重ねる半透明の白色レイヤーを追加 */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  opacity: 0.5;
+  z-index: -1;
 }
 
 a {
@@ -21,21 +37,17 @@ a:hover {
 }
 
 /* --- ヘッダーとナビゲーション --- */
-header {
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* ヘッダーに少し影をつける */
-}
-
 .gnav-wrap {
-  background-color: #4a90e2; /* ナビゲーションバーの背景色 */
+  background-color: #4a90e2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .gnav-inner {
   max-width: 1200px;
-  margin: 0 auto; /* 中央揃え */
+  margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between; /* ロゴとメニューを両端に配置 */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -46,7 +58,7 @@ header {
 }
 
 .gnav-list {
-  list-style: none; /* リストの黒点を消す */
+  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -58,66 +70,209 @@ header {
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s; /* 背景色が0.3秒で変化 */
+  transition: background-color 0.3s;
 }
 
 .gnav-list li a:hover {
-  background-color: #357abd; /* マウスを乗せた時の色 */
+  background-color: #357abd;
 }
 
 /* --- メインコンテンツ --- */
 main {
-  padding: 40px 0;
+  padding: 40px 20px;
 }
 
-.container {
+.card {
   max-width: 800px;
-  margin: 0 auto 40px auto; /* 上下左右に余白、中央揃え */
-  padding: 30px;
+  margin: 0 auto;
+  padding: 20px 30px 30px;
   background-color: #ffffff;
-  border-radius: 8px; /* 角を少し丸くする */
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-h2 {
+h1 {
   text-align: center;
   color: #4a90e2;
   border-bottom: 2px solid #4a90e2;
   padding-bottom: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-/* --- INFORMATIONセクション --- */
-.info-section dl {
-  margin: 0;
+/* --- フィルターエリア --- */
+.filter-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.info-section dt {
+.filter-group label {
   font-weight: bold;
-  padding: 15px 0 5px;
-  border-top: 1px solid #eee;
+  margin-right: 10px;
+  width: 120px;
 }
 
-.info-section dt:first-of-type {
-  border-top: none; /* 最初の項目の上線は消す */
-}
-
-.info-section dd {
-  margin-left: 0; /* ddのデフォルトのインデントをリセット */
-  padding-bottom: 15px;
-}
-
-.map-image {
-  display: inline;
-  justify-content: center;
+.filter-group select {
+  padding: 8px 12px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+/* --- 落とし物リスト表示エリア --- */
+#content-area {
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 20px 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.lost-item {
+  padding: 15px 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lost-item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.item-time, .item-location {
+  color: #555;
+  font-size: 0.9em;
+}
+
+/* --- メッセージ表示用のスタイル --- */
+.no-items, .error, #content-area p {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 1.1em;
+    color: #777;
+}
+
+.error {
+    color: #d9534f;
 }
 
 /* --- フッター --- */
 footer {
   text-align: center;
-  padding: 14px;
+  padding: 20px;
   background-color: #333;
   color: #ffffff;
+}
+
+/*画像の追加部分のスタイル*/
+/* クリックできることを示すスタイル */
+.item-name-clickable {
+  cursor: pointer;
+  color: #007bff; /* 青色にする */
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.item-name-clickable:hover {
+  color: #0056b3; /* ホバー時に少し濃い青色に */
+}
+
+
+/* モーダル全体（最初は非表示） */
+#image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 非表示の状態 */
+#image-modal.modal-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* 表示の状態 */
+#image-modal.modal-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* 背景のオーバーレイ */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒 */
+}
+
+/* 画像コンテンツ部分 */
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 85%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 2001;
+}
+
+#modal-image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(85vh - 20px); /* 画面の高さに応じて調整 */
+  border-radius: 4px;
+}
+
+/* 閉じるボタン */
+.modal-close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  transform: scale(1.1);
 }
