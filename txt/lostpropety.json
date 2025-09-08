@@ -1,0 +1,107 @@
+[
+  {
+    "category": "財布・貴重品",
+    "name": "黒色の二つ折り財布",
+    "time": "10:15頃",
+    "location": "運営テントA",
+    "image": "img/items/money_saifu.png"
+  },
+  {
+    "category": "スマートフォン・電子機器",
+    "name": "スマートフォン（緑色ケース）",
+    "time": "11:00頃",
+    "location": "運営テントB",
+    "image": "img/items/smartphone_cover_techou.png"
+  },
+  {
+    "category": "かばん・袋物",
+    "name": "青のサコッシュ",
+    "time": "11:20頃",
+    "location": "運営テントC",
+    "image": "img/items/fashion_bag_sacoche.png"
+  },
+  {
+    "category": "財布・貴重品",
+    "name": "車のキー（キーホルダー付き）",
+    "time": "12:00頃",
+    "location": "運営テントD",
+    "image": "img/items/hotel_key.png"
+  },
+  {
+    "category": "その他",
+    "name": "白いタオル",
+    "time": "12:45頃",
+    "location": "運営テントA",
+    "image": "img/items/pool_bath_towel.png"
+  },
+  {
+    "category": "スマートフォン・電子機器",
+    "name": "ワイヤレスイヤホン(黒色ケース)",
+    "time": "13:10頃",
+    "location": "運営テントB",
+    "image": "img/items/music_earphone_true_wireless_case.png"
+  },
+  {
+    "category": "その他",
+    "name": "緑色の水筒",
+    "time": "13:50頃",
+    "location": "運営テントC",
+    "image": "img/items/obentou_suitou.png"
+  },
+  {
+    "category": "財布・貴重品",
+    "name": "電車のICカード",
+    "time": "14:20頃",
+    "location": "運営テントD",
+    "image": "img/items/train_ic_card.png"
+  },
+  {
+    "category": "かばん・袋物",
+    "name": "子供用の小さなリュック",
+    "time": "14:45頃",
+    "location": "運営テントA",
+    "image": "img/items/youchien_tsuuen_bag.png"
+  },
+  {
+    "category": "その他",
+    "name": "サングラス",
+    "time": "15:00頃",
+    "location": "運営テントB",
+    "image": "img/items/sunglass_sharp.png"
+  },
+  {
+    "category": "スマートフォン・電子機器",
+    "name": "スマートウォッチ",
+    "time": "15:30頃",
+    "location": "運営テントC",
+    "image": "img/items/smartwatch.jpg"
+  },
+  {
+    "category": "財布・貴重品",
+    "name": "赤いカードケース",
+    "time": "16:10頃",
+    "location": "運営テントD",
+    "image": "img/items/cardcase_red.jpg"
+  },
+  {
+    "category": "その他",
+    "name": "青い折りたたみ傘",
+    "time": "16:45頃",
+    "location": "運営テントA",
+    "image": "img/items/umbrella_blue.jpg"
+  },
+  {
+    "category": "かばん・袋物",
+    "name": "ビニール製のポーチ",
+    "time": "17:00頃",
+    "location": "運営テントB",
+    "image": "img/items/pouch_vinyl.jpg"
+  },
+  {
+    "category": "その他",
+    "name": "緑色の帽子",
+    "time": "17:30頃",
+    "location": "運営テントC",
+    "image": "img/items/hat_green.jpg"
+  }
+]

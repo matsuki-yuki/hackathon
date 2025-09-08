@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>落とし物リスト</title>
     <link rel="stylesheet" href="css/lostproperty.css">
-    <script src="script.js" defer></script>
+    <script src="js/lostproperty.js" defer></script>
 </head>
 <body>
     <header>
-    <div class="gnav-wrap">
-        <nav class="gnav-inner">
-            <p class="gnav-logo"><span>〇〇夏祭り</span></p>
+        <div class="gnav-wrap">
+            <nav class="gnav-inner">
+                <p class="gnav-logo"><span>夏祭りお助けホームページ</span></p>
                 <ul class="gnav-list">
-                <li><a href="Homepage.html">ホーム</a></li>
-                <li><a href="Yatai.html">屋台一覧</a></li>
-                <li><a href="Lostchild.html">迷子案内</a></li>
-                <li><a href="Lostproperty.html">落とし物案内</a></li>
-        </ul>
-        </nav>
-    </div>
+                    <li><a href="Homepage.html">ホーム</a></li>
+                    <li><a href="Yatai.html">屋台一覧</a></li>
+                    <li><a href="Lostchild.html">迷子案内</a></li>
+                    <li><a href="Lostproperty.html">落とし物案内</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
         <div class="card">
             <h1>落とし物リスト</h1>
             <div class="filter-group">
-                <label for="category-select">種類を選択:</label>
+                <label for="category-select">落とし物:</label>
                 <select id="category-select">
                     <option value="all">すべて表示</option>
                     <option value="財布・貴重品">財布・貴重品</option>
@@ -34,13 +35,36 @@
                     <option value="その他">その他</option>
                 </select>
             </div>
-        </div>
-            <div id="content-area">
-                <p>データを読み込んでいます...</p>
+            <div class="filter-group">
+                <label for="itemTime-select">預かり時間:</label>
+                <select id="itemTime-select">
+                    <option value="all">すべて表示</option>
+                </select>
             </div>
+            <div class="filter-group">
+                <label for="itemLocation-select">預かり場所:</label>
+                <select id="itemLocation-select">
+                    <option value="all">すべて表示</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="content-area">
+            <p>データを読み込んでいます...</p>
+        </div>
     </main>
+
     <footer>
         <p>&copy; 2025 〇〇夏祭り実行委員会</p>
     </footer>
+    <!-- 画像の追加 -->
+    <div id="image-modal" class="modal-hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <span class="modal-close-btn">&times;</span>
+            <img id="modal-image" src="" alt="落とし物の画像">
+        </div>
+    </div>
+
 </body>
 </html>

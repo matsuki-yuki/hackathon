@@ -9,7 +9,7 @@ let allChildrenData = [];
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    fetch('lost_children.json') 
+    fetch('/txt/lostchild.json') 
         .then(response => response.json()) 
         .then(data => {
             allChildrenData = data; 
@@ -33,6 +33,7 @@ function displayChildren(childrenArray) {
                 <h3>${child.name}</h3>
                 <p><strong>年齢:</strong> ${child.age}歳</p>
                 <p><strong>現在の場所:</strong> ${child.location}</p>
+                <p><strong>服装:</strong> ${child.clothing}</p>
             </div>
         `;
         

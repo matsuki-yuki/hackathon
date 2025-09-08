@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>迷子のご案内</title>
-    <link rel="stylesheet" href="lostchild.css">
+    <title>迷子のご案内 - 夏祭り</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lostchild.css">
 </head>
 <body>
 
-    <header>
-        <h1>迷子のご案内</h1>
-        <div class="search-area">
-            <input type="text" id="searchInput" placeholder="お名前で検索">
-            <button id="searchButton">検索</button>
+  <header>
+    <div class="gnav-wrap">
+      <nav class="gnav-inner">
+        <p class="gnav-logo"><span>夏祭りお助けホームページ</span></p>
+        <ul class="gnav-list">
+          <li><a href="Homepage.html">ホーム</a></li>
+          <li><a href="Yatai.html">屋台一覧</a></li>
+          <li><a href="Lostchild.html">迷子案内</a></li>
+          <li><a href="Lostproperty.html">落とし物案内</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2>迷子のご案内</h2>
+      <p>現在、以下の迷子のお子様を保護しています。お心当たりの方は、本部テントまでお越しください。</p>
+      <div class="search-area">
+        <input type="text" id="searchInput" placeholder="お子様のお名前、特徴などで検索">
+        <button id="searchButton">検索</button>
+      </div>
+      <div id="infoContainer">
         </div>
-    </header>
+    </section>
+  </main>
 
-    <main>
-        <div id="infoContainer"></div>
-    </main>
+  <footer>
+    <p>&copy; 2025 〇〇夏祭り実行委員会</p>
+  </footer>
 
-    <script src="lostchild.js"></script>
+  <script src="js/lostchild.js"></script>
 </body>
 </html>
-
-
