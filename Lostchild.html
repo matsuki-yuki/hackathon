@@ -2,51 +2,44 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>テキスト表示機能</title>
-    <style>
-        /* 見た目を整えるための簡単なCSS */
-        body { font-family: sans-serif; }
-        #displayArea {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-            white-space: pre-wrap; /* 改行やスペースをそのまま表示する */
-            word-wrap: break-word;   
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迷子のご案内 - 夏祭り</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lostchild.css">
 </head>
 <body>
-    <h1>入力内容をページに表示</h1>
 
-    <label for="title">タイトル:</label><br>
-    <input type="text" id="title" value="今日のメモ"><br><br>
-    
-    <label for="content">内容:</label><br>
-    <textarea id="content" rows="10" cols="50"></textarea><br><br>
-    
-    <button id="displayBtn">この内容で表示する</button>
+  <header>
+    <div class="gnav-wrap">
+      <nav class="gnav-inner">
+        <p class="gnav-logo"><span>夏祭りお助けホームページ</span></p>
+        <ul class="gnav-list">
+          <li><a href="Homepage.html">ホーム</a></li>
+          <li><a href="Yatai.html">屋台一覧</a></li>
+          <li><a href="Lostchild.html">迷子案内</a></li>
+          <li><a href="Lostproperty.html">落とし物案内</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <hr>
-    <h2>表示エリア</h2>
-    <div id="displayArea"></div>
+  <main>
+    <section class="container">
+      <h2>迷子のご案内</h2>
+      <p>現在、以下の迷子のお子様を保護しています。お心当たりの方は、本部テントまでお越しください。</p>
+      <div class="search-area">
+        <input type="text" id="searchInput" placeholder="お子様のお名前、特徴などで検索">
+        <button id="searchButton">検索</button>
+      </div>
+      <div id="infoContainer">
+        </div>
+    </section>
+  </main>
 
-    <script>
-        // ボタン要素を取得
-        const displayBtn = document.getElementById('displayBtn');
+  <footer>
+    <p>&copy; 2025 〇〇夏祭り実行委員会</p>
+  </footer>
 
-        // ボタンがクリックされたときの処理
-        displayBtn.addEventListener('click', () => {
-            // 入力されたタイトルと内容を取得
-            const title = document.getElementById('title').value;
-            const content = document.getElementById('content').value;
-
-            // 表示エリアの要素を取得
-            const displayArea = document.getElementById('displayArea');
-            
-            // 表示エリアに、取得したタイトルと内容をHTMLとして書き込む
-            displayArea.innerHTML = `<h3>${title}</h3><p>${content}</p>`;
-        });
-    </script>
+  <script src="js/lostchild.js"></script>
 </body>
 </html>

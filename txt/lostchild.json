@@ -1,0 +1,98 @@
+[
+  {
+    "name": "山田 太郎",
+    "age": 5,
+    "location": "運営テントA",
+    "clothing": "赤いTシャツ、青い半ズボン、白い帽子"
+  },
+  {
+    "name": "鈴木 花子",
+    "age": 6,
+    "location": "運営テントB",
+    "clothing": "ピンク色のワンピース、麦わら帽子"
+  },
+  {
+    "name": "佐藤 次郎",
+    "age": 4,
+    "location": "運営テントC",
+    "clothing": "黄色いポロシャツ、デニムのオーバーオール"
+  },
+  {
+    "name": "小泉進次郎",
+    "age": 7,
+    "location": "運営テントD",
+    "clothing": "サッカーのユニフォーム（青）、黒い短パン"
+  },
+  {
+    "name": "あああ",
+    "age": 7,
+    "location": "運営テントA",
+    "clothing": "緑色のチェックシャツ、ベージュのズボン"
+  },
+  {
+    "name": "ニャァー",
+    "age": 7,
+    "location": "運営テントB",
+    "clothing": "猫のイラストが入った白いTシャツ、ジーンズ"
+  },
+  {
+    "name": "石破辞任しろ",
+    "age": 7,
+    "location": "運営テントC",
+    "clothing": "ボーダー柄の長袖Tシャツ、グレーのスウェットパンツ"
+  },
+  {
+    "name": "sake",
+    "age": 7,
+    "location": "運営テントD",
+    "clothing": "魚の模様が入った甚平"
+  },
+  {
+    "name": "シグナル",
+    "age": 7,
+    "location": "運営テントA",
+    "clothing": "黒いパーカー、黒いズボン"
+  },
+  {
+    "name": "add",
+    "age": 7,
+    "location": "運営テントB",
+    "clothing": "オレンジ色のタンクトップ、カーキ色の半ズボン"
+  },
+  {
+    "name": "ら",
+    "age": 7,
+    "location": "運営テントC",
+    "clothing": "水色のTシャツ、白い短パン"
+  },
+  {
+    "name": "aaaa",
+    "age": 7,
+    "location": "運営テントD",
+    "clothing": "灰色のトレーナー、紺色のジーンズ"
+  },
+  {
+    "name": "mix",
+    "age": 7,
+    "location": "運営テントA",
+    "clothing": "キャラクターがプリントされたTシャツ、緑のズボン"
+  },
+  {
+    "name": "pine",
+    "age": 7,
+    "location": "運営テントB",
+    "clothing": "パイナップル柄のアロハシャツ、白い半ズボン"
+  },
+  {
+    "name": "bot",
+    "age": 7,
+    "location": "運営テントC",
+    "clothing": "ロボットの絵が描かれたTシャツ、青いジーンズ"
+  },
+  {
+    "name": " pem",
+    "age": 7,
+    "location": "運営テントD",
+    "clothing": "無地の白いシャツ、茶色のコーデュロイパンツ"
+  }
+]
